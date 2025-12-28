@@ -1,3 +1,11 @@
+// Configuration
+const CONFIG = {
+    whatsappNumber: '521234567890', // Update this with your actual WhatsApp number
+    dateFormat: {
+        timeZoneAdjustment: 'T00:00:00' // UTC midnight to avoid timezone issues
+    }
+};
+
 // Register Service Worker for PWA
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
@@ -295,7 +303,7 @@ if (appointmentForm) {
         const comentarios = document.getElementById('comentarios').value;
         
         // Format date to readable format
-        const fechaObj = new Date(fecha + 'T00:00:00');
+        const fechaObj = new Date(fecha + CONFIG.dateFormat.timeZoneAdjustment);
         const opciones = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
         const fechaFormateada = fechaObj.toLocaleDateString('es-ES', opciones);
         
@@ -311,9 +319,8 @@ if (appointmentForm) {
         }
         mensaje += `%0A¿Pueden confirmar mi cita? Gracias.`;
         
-        // WhatsApp number (replace with actual number)
-        const whatsappNumber = '521234567890';
-        const whatsappURL = `https://wa.me/${whatsappNumber}?text=${mensaje}`;
+        // Create WhatsApp URL
+        const whatsappURL = `https://wa.me/${CONFIG.whatsappNumber}?text=${mensaje}`;
         
         // Open WhatsApp
         window.open(whatsappURL, '_blank');

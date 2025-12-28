@@ -1,3 +1,11 @@
+// Configuration
+const CONFIG = {
+    whatsappNumber: '521234567890', // Update this with your actual WhatsApp number
+    dateFormat: {
+        timeZoneAdjustment: 'T00:00:00' // UTC midnight to avoid timezone issues
+    }
+};
+
 // Register Service Worker for PWA
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
@@ -265,4 +273,61 @@ window.addEventListener('hashchange', () => {
     }
 });
 
-console.log('Quiropractica AraZavala - Website loaded successfully');
+// Set minimum date for appointment form
+document.addEventListener('DOMContentLoaded', () => {
+    const fechaInput = document.getElementById('fecha');
+    if (fechaInput) {
+        // Set minimum date to today
+        const today = new Date().toISOString().split('T')[0];
+        fechaInput.setAttribute('min', today);
+        
+        // Set maximum date to 3 months from now
+        const maxDate = new Date();
+        maxDate.setMonth(maxDate.getMonth() + 3);
+        fechaInput.setAttribute('max', maxDate.toISOString().split('T')[0]);
+    }
+});
+
+// Handle appointment form submission
+const appointmentForm = document.getElementById('appointmentForm');
+if (appointmentForm) {
+    appointmentForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Get form data
+        const nombre = document.getElementById('nombre').value;
+        const telefono = document.getElementById('telefono').value;
+        const fecha = document.getElementById('fecha').value;
+        const hora = document.getElementById('hora').value;
+        const servicio = document.getElementById('servicio').value;
+        const comentarios = document.getElementById('comentarios').value;
+        
+        // Format date to readable format
+        const fechaObj = new Date(fecha + CONFIG.dateFormat.timeZoneAdjustment);
+        const opciones = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        const fechaFormateada = fechaObj.toLocaleDateString('es-ES', opciones);
+        
+        // Create WhatsApp message
+        let mensaje = `Hola, me gustaría agendar una cita en Óptica Visión:%0A%0A`;
+        mensaje += `*Nombre:* ${nombre}%0A`;
+        mensaje += `*Teléfono:* ${telefono}%0A`;
+        mensaje += `*Fecha preferida:* ${fechaFormateada}%0A`;
+        mensaje += `*Hora preferida:* ${hora}%0A`;
+        mensaje += `*Servicio:* ${servicio}%0A`;
+        if (comentarios) {
+            mensaje += `*Comentarios:* ${comentarios}%0A`;
+        }
+        mensaje += `%0A¿Pueden confirmar mi cita? Gracias.`;
+        
+        // Create WhatsApp URL
+        const whatsappURL = `https://wa.me/${CONFIG.whatsappNumber}?text=${mensaje}`;
+        
+        // Open WhatsApp
+        window.open(whatsappURL, '_blank');
+        
+        // Optional: Reset form after submission
+        // appointmentForm.reset();
+    });
+}
+
+console.log('Óptica Visión - Website loaded successfully');

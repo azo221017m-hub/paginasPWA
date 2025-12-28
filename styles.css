@@ -6,12 +6,12 @@
 }
 
 :root {
-    /* Color Palette - Medical/Chiropractic Theme */
-    --primary-color: #2c5f7d;
-    --primary-dark: #1e4458;
-    --primary-light: #3d7a9d;
-    --secondary-color: #4a9d8f;
-    --accent-color: #68c3b3;
+    /* Color Palette - Optical Shop Theme */
+    --primary-color: #4A90E2;
+    --primary-dark: #2E5C8A;
+    --primary-light: #6BA3E8;
+    --secondary-color: #6B46C1;
+    --accent-color: #50C878;
     --text-dark: #1a2332;
     --text-medium: #4a5568;
     --text-light: #718096;
@@ -959,4 +959,310 @@ section {
 .fade-in.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* Graduation Section */
+.graduation-section {
+    background: var(--background-white);
+}
+
+.graduation-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-3xl);
+    align-items: center;
+}
+
+.graduation-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.graduation-text h3 {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-md);
+}
+
+.graduation-text > p {
+    color: var(--text-medium);
+    line-height: 1.8;
+    margin-bottom: var(--spacing-xl);
+    font-size: 1.1rem;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
+.feature-item {
+    display: flex;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md);
+    background: var(--background-light);
+    border-radius: var(--radius-lg);
+    transition: all var(--transition-base);
+}
+
+.feature-item:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    background: white;
+}
+
+.feature-icon {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature-icon svg {
+    width: 24px;
+    height: 24px;
+    color: white;
+}
+
+.feature-item h4 {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    margin-bottom: 4px;
+}
+
+.feature-item p {
+    color: var(--text-medium);
+    font-size: 0.9rem;
+}
+
+.cta-box {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-xl);
+    text-align: center;
+    color: white;
+}
+
+.cta-box p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-md);
+}
+
+.cta-box .btn {
+    background: white;
+    color: var(--primary-color);
+}
+
+.cta-box .btn:hover {
+    background: var(--background-light);
+    transform: translateY(-2px);
+}
+
+/* Appointment Form Section */
+.appointment-section {
+    background: var(--background-light);
+    color: var(--text-dark);
+}
+
+.appointment-section .section-title,
+.appointment-section .section-description {
+    color: var(--text-dark);
+}
+
+.appointment-section .section-tag {
+    background: var(--accent-color);
+}
+
+.appointment-content {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: var(--spacing-3xl);
+    align-items: start;
+}
+
+.appointment-form-container {
+    display: flex;
+    justify-content: center;
+}
+
+.appointment-card {
+    background: white;
+    padding: var(--spacing-2xl);
+    border-radius: var(--radius-2xl);
+    box-shadow: var(--shadow-lg);
+    width: 100%;
+    max-width: 600px;
+}
+
+.appointment-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    color: var(--text-dark);
+    margin-bottom: var(--spacing-sm);
+}
+
+.appointment-card > p {
+    color: var(--text-medium);
+    margin-bottom: var(--spacing-xl);
+}
+
+.appointment-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+
+.form-group label {
+    font-weight: 600;
+    color: var(--text-dark);
+    font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: var(--spacing-sm) var(--spacing-md);
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius-md);
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    transition: all var(--transition-base);
+    background: var(--background-white);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.btn-submit {
+    margin-top: var(--spacing-md);
+    width: 100%;
+    font-size: 1.1rem;
+}
+
+.appointment-info h3 {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    color: var(--text-dark);
+    margin-bottom: var(--spacing-md);
+}
+
+.appointment-benefits {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
+.appointment-benefits .benefit-item {
+    display: flex;
+    gap: var(--spacing-md);
+    align-items: start;
+    padding: var(--spacing-md);
+    background: white;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-base);
+}
+
+.appointment-benefits .benefit-item:hover {
+    transform: translateX(8px);
+    box-shadow: var(--shadow-md);
+}
+
+.appointment-benefits .benefit-item svg {
+    width: 24px;
+    height: 24px;
+    color: var(--success-color);
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.appointment-benefits .benefit-item h4 {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    margin-bottom: 4px;
+}
+
+.appointment-benefits .benefit-item p {
+    color: var(--text-medium);
+    font-size: 0.95rem;
+}
+
+.contact-direct {
+    background: white;
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-xl);
+    text-align: center;
+    box-shadow: var(--shadow-md);
+}
+
+.contact-direct p {
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-medium);
+}
+
+.contact-direct p:first-child {
+    color: var(--text-dark);
+    font-size: 1.1rem;
+}
+
+.contact-direct .btn {
+    margin-top: var(--spacing-md);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .graduation-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .graduation-image {
+        order: -1;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .appointment-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .appointment-card {
+        padding: var(--spacing-lg);
+    }
+    
+    .feature-item {
+        flex-direction: column;
+        text-align: center;
+    }
 }

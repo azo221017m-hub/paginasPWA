@@ -1,0 +1,6 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <rect width="512" height="512" fill="#2c5f7d"/>
+  <path d="M256 100L256 412M256 100C230 140 180 180 100 220M256 100C282 140 332 180 412 220M256 256C230 236 180 216 100 196M256 256C282 236 332 216 412 196M256 412C230 372 180 332 100 292M256 412C282 372 332 332 412 292" stroke="white" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="256" y="460" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="white" text-anchor="middle">Quiropractica</text>
+  <text x="256" y="495" font-family="Arial, sans-serif" font-size="40" font-weight="bold" fill="#68c3b3" text-anchor="middle">AraZavala</text>
+</svg>

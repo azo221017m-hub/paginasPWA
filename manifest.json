@@ -1,11 +1,11 @@
 {
-  "name": "Quiropractica AraZavala",
-  "short_name": "AraZavala",
-  "description": "Consultorio de Quiropráctica profesional",
+  "name": "Óptica Visión",
+  "short_name": "Óptica",
+  "description": "Óptica especializada en salud visual y tecnología avanzada",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#2c5f7d",
+  "theme_color": "#4A90E2",
   "orientation": "portrait-primary",
   "icons": [
     {

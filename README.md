@@ -1,28 +1,29 @@
-# Quiropractica AraZavala - PWA
+# Óptica Visión - PWA
 
-Una página web progresiva (PWA) moderna y minimalista para el consultorio de quiropráctica AraZavala.
+Una página web progresiva (PWA) moderna y minimalista para la óptica Óptica Visión, especializada en salud visual y tecnología avanzada.
 
 ## 🌟 Características
 
 - **Progressive Web App (PWA)**: Instalable en dispositivos móviles y de escritorio
 - **Diseño Responsivo**: Funciona perfectamente en todos los dispositivos
 - **Animaciones Suaves**: Scroll animado y transiciones modernas
-- **Integración WhatsApp**: Agenda citas directamente por WhatsApp
+- **Integración WhatsApp**: Sistema de citas con selección de fecha y hora
 - **Sin Backend**: Página estática sin necesidad de servidor
 
 ## 📱 Secciones
 
-1. **Inicio**: Sección hero con información principal
-2. **Nosotros**: Misión y servicios del consultorio
-3. **Nuestra Ubicación**: Información de contacto y ubicación
-4. **Historias**: Testimonios de pacientes
-5. **Agendar Cita**: Integración directa con WhatsApp
+1. **Inicio**: Sección hero con información principal sobre la óptica
+2. **Nuestra Visión**: Misión y servicios de la óptica
+3. **Toma de Graduación por Computadora**: Información sobre tecnología de graduación digital
+4. **Nuestra Ubicación**: Información de contacto, horarios y ubicación
+5. **Citas**: Formulario interactivo para agendar citas que envía datos por WhatsApp
 
 ## 🎨 Diseño
 
-- **Colores**: Paleta médica profesional (azules y verdes)
+- **Colores**: Paleta moderna para óptica (azules y púrpura)
 - **Tipografía**: Inter y Poppins (modernas y legibles)
 - **Estilo**: Minimalista y profesional
+- **Iconos**: SVG inline de optometría y salud visual
 
 ## 🚀 Cómo usar
 
@@ -60,7 +61,7 @@ Puedes desplegar esta página en cualquier servicio de hosting estático:
 paginasPWA/
 ├── index.html          # Página principal
 ├── styles.css          # Estilos CSS
-├── script.js           # JavaScript para interactividad
+├── script.js           # JavaScript para interactividad y formularios
 ├── manifest.json       # Configuración PWA
 ├── sw.js              # Service Worker para PWA
 ├── images/            # Iconos PWA
@@ -77,17 +78,19 @@ paginasPWA/
 
 Edita el archivo `index.html` y busca:
 - Número de WhatsApp: `+52 123 456 7890`
-- Email: `contacto@arazavala.com`
+- Email: `contacto@opticavision.com`
 - Dirección: `Av. Principal #123`
+
+También actualiza el número de WhatsApp en `script.js` (línea donde se define `whatsappNumber`).
 
 ### Cambiar colores
 
 Edita el archivo `styles.css` y modifica las variables CSS en `:root`:
 ```css
 :root {
-    --primary-color: #2c5f7d;
-    --secondary-color: #4a9d8f;
-    --accent-color: #68c3b3;
+    --primary-color: #4A90E2;
+    --secondary-color: #6B46C1;
+    --accent-color: #50C878;
     /* ... más colores */
 }
 ```
@@ -102,18 +105,19 @@ Esta página es una Progressive Web App, lo que significa que:
 - Se puede instalar en dispositivos móviles
 - Funciona offline (después de la primera carga)
 - Se comporta como una app nativa
+- Notificaciones push (si se configura)
 
 ## 🌐 Tecnologías
 
 - HTML5
 - CSS3 (Variables CSS, Grid, Flexbox, Animations)
-- JavaScript ES6+ (Service Workers, Intersection Observer)
+- JavaScript ES6+ (Service Workers, Intersection Observer, Form Handling)
 - PWA (Manifest, Service Worker)
 
 ## 📄 Licencia
 
-Este proyecto está diseñado específicamente para Quiropractica AraZavala.
+Este proyecto está diseñado específicamente para Óptica Visión.
 
 ## 👨‍💻 Desarrollo
 
-Desarrollado como una solución moderna y profesional para consultorios de quiropráctica.
+Desarrollado como una solución moderna y profesional para ópticas con tecnología avanzada.

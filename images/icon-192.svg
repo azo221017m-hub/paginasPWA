@@ -1,0 +1,5 @@
+<svg width="192" height="192" viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg">
+  <rect width="192" height="192" fill="#2c5f7d"/>
+  <path d="M96 40L96 152M96 40C86 52 66 64 40 76M96 40C106 52 126 64 152 76M96 96C86 88 66 80 40 72M96 96C106 88 126 80 152 72M96 152C86 140 66 128 40 116M96 152C106 140 126 128 152 116" stroke="white" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="96" y="170" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white" text-anchor="middle">AraZavala</text>
+</svg>

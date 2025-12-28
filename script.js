@@ -97,7 +97,6 @@ window.addEventListener('scroll', updateActiveNavLink);
 
 // Navbar Background on Scroll
 const navbar = document.querySelector('.navbar');
-let lastScroll = 0;
 
 window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
@@ -107,8 +106,6 @@ window.addEventListener('scroll', () => {
     } else {
         navbar.style.boxShadow = '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)';
     }
-    
-    lastScroll = currentScroll;
 });
 
 // Intersection Observer for Scroll Animations
